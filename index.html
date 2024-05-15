@@ -1,14 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=https://phateniot.github.io/docs/">
-  <title>Redirecting...</title>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="http://cloud.189.cn/logo.ico">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes, width=device-width">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    	<script type="text/javascript">
+// 获取浏览器默认语言
+function getBrowserLang() {
+  let browserLang = navigator.language
+    ? navigator.language
+    : navigator.browserLanguage;
+  let defaultBrowserLang = "";
+  if (
+    browserLang.toLowerCase() === "us" ||
+    browserLang.toLowerCase() === "en" ||
+    browserLang.toLowerCase() === "en_us"
+  ) {
+    defaultBrowserLang = "en_US";
+  } else {
+    defaultBrowserLang = "zh_CN";
+  }
+  return browserLang;
+};
+var aa = getBrowserLang();
+if (aa=="zh-CN")
+{
+  window.location.href = "/zh/";
+}else{
+  window.location.href = "/en/";
+}
+
+    </script>
 </head>
-<body>
-  <p>If you are not redirected automatically, follow <a href="https://phateniot.github.io/docs/">this link</a>.</p>
-  <script>
-    window.location.href = "https://phateniot.github.io/docs/"
-  </script>
+
+<body bgcolor="#FFFFFF">
+
 </body>
 </html>

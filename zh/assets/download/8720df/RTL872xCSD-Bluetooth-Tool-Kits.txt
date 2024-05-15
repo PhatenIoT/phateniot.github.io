@@ -1,0 +1,4 @@
+RTL872xCS/D Bluetooth Tool Kits download link is as follows:
+https://github.com/ambiot/ambd_sdk/tree/dev/tools/bluetooth
+
+Copy this link to your browser

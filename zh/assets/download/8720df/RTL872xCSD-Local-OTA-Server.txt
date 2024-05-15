@@ -1,0 +1,5 @@
+RTL872xCS/D Local OTA Server download link is as follows:
+https://github.com/ambiot/ambd_sdk/tree/dev/tools/DownloadServer
+https://github.com/ambiot/ambd_sdk/tree/dev/tools/DownloadServer(HTTP)
+
+Copy the links to your browser
