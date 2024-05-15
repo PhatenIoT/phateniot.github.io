@@ -1,0 +1,144 @@
+.md-typeset__table {
+    min-width: 100%;
+}
+
+@media only screen and (min-width: 768px)
+{
+	td:nth-child(1){
+		white-space: nowrap;
+	}
+}
+/*
+.Telegraf-Regular{
+    font-family:Microsoft YaHei UI;
+    src: url("typography/msyh.ttc");
+}
+
+.Telegraf-UltraBold{
+    font-family:Microsoft YaHei UI Bold;
+    src: url("typography/msyhbd.ttc");
+}*/
+
+* {
+    --md-primary-fg-color: #2094F8;
+    /*--md-primary-fg-color: #BDD61C;*/
+    /*--md-primary-fg-color: #FF42CD;*/
+    /*--md-primary-fg-color: #AB47BD; purple*/    
+    --md-primary-fg-color--light: #2094F8;
+    --md-primary-fg-color--dark:  #2094F8;
+    --md-typeset-color:   var(--md-default-fg-color);
+    --md-typeset-a-color: var(--md-primary-fg-color--light);
+    /*--md-text-font: "Telegraf-Regular"*/
+}
+
+:root {
+    --md-primary-fg-color: #181917;
+    --md-primary-fg-color--light: #2094F8;
+    --md-primary-fg-color--dark:  #2094F8;
+}
+
+:root>* {
+    --md-primary-bg-color:   #000;
+    --md-typeset-color:   var(--md-default-fg-color);
+    --md-typeset-a-color: var(--md-primary-fg-color--light);
+}
+
+/*
+markdown and image alignment
+ALT tag and a CSS selector on the alt tag
+*/
+img[src*='#left'] {
+    float: left;
+}
+img[src*='#right'] {
+    float: right;
+}
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}
+
+/*
+Tables set to 100% width
+*/
+.md-typeset__table {
+    min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+    display: table;
+}
+
+/*
+Colors for First Steps
+custom code blocks coloring
+*/
+.fsg-timestamp {
+    color: grey;
+}
+.fsg-userinput {
+    color: cornflowerblue;
+}
+.fsg-path, .fsg-prompt {
+    color: mediumseagreen;
+}
+
+/*
+Footer social media icons:
+set the size of the svg icons and the espace between them.
+*/
+.md-social__link {
+    width: 2rem;
+}
+.md-social__link svg {
+    max-height: 1.6rem;
+}
+
+/*
+hide content only for mobile devices
+*/
+@media only screen and (min-device-width: 280px) and (max-device-width: 480px)
+{
+	.hide-on-mobile {
+    display: none;
+	}
+}
+
+.custForm {
+    width:80%;
+}
+.custForm h4{
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.custForm input {
+    border:1px solid #CCCCCC;
+    width: 100%;
+    height: 35px;
+}
+.custForm select{
+        border:1px solid #CCCCCC;
+    height: 35px;
+    width: 100%;
+}
+.custForm textarea {
+    border:1px solid #CCCCCC;
+    width: 100%;
+}
+.custForm .button {
+    background-color: #0B70F6;
+    border-radius: 5px;
+    width: 80px;
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+
+.goback input {
+    font-size:18px;
+    padding: 10px;
+    color:#FFFFFF;
+    border-radius: 5px;
+    background-color: #0B70F6;
+}
