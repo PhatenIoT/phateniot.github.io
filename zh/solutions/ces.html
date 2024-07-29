@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Template</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="grid-container" id="gridContainer">
+        <!-- 第一页格子 -->
+        <div class="grid-item">
+            <img src="image1.jpg" alt="Image 1">
+            <h2>Title 1</h2>
+            <p>Description 1</p>
+        </div>
+        <div class="grid-item" onclick="window.location.href='/solutions/matter/rgbcw_light/';" >
+            <img src="/assets/images/matter/5灯泡.png" alt="Image 2">
+            <h2>Matter 5路 球灯泡</h2>
+            <p>可定制、有Matter认证证书、互联互通homekit、Alexa、GoogleHome</p>
+        </div>
+        <div  class="grid-item">
+            <img src="/assets/images/matter/5灯泡.png" alt="Image 2">
+            <h2>Matter 5路 球灯泡</h2>
+            <p>可定制、有Matter认证证书、互联互通homekit、Alexa、GoogleHome</p>
+        </div>
+        <div  class="grid-item">
+            <img src="/assets/images/matter/5灯泡.png" alt="Image 2">
+            <h2>Matter 5路 球灯泡</h2>
+            <p>可定制、有Matter认证证书、互联互通homekit、Alexa、GoogleHome</p>
+        </div>
+        <div  class="grid-item">
+            <img src="/assets/images/matter/5灯泡.png" alt="Image 2">
+            <h2>Matter 5路 球灯泡</h2>
+            <p>可定制、有Matter认证证书、互联互通homekit、Alexa、GoogleHome</p>
+        </div>
+        <div  class="grid-item">
+            <img src="/assets/images/matter/5灯泡.png" alt="Image 2">
+            <h2>Matter 5路 球灯泡</h2>
+            <p>可定制、有Matter认证证书、互联互通homekit、Alexa、GoogleHome</p>
+        </div>
+        <div  class="grid-item">
+            <img src="/assets/images/matter/5灯泡.png" alt="Image 2">
+            <h2>Matter 5路 球灯泡</h2>
+            <p>可定制、有Matter认证证书、互联互通homekit、Alexa、GoogleHome</p>
+        </div>
+        <div  class="grid-item">
+            <img src="/assets/images/matter/5灯泡.png" alt="Image 2">
+            <h2>Matter 5路 球灯泡</h2>
+            <p>可定制、有Matter认证证书、互联互通homekit、Alexa、GoogleHome</p>
+        </div>
+        <div  class="grid-item">
+            <img src="/assets/images/matter/5灯泡.png" alt="Image 2">
+            <h2>Matter 5路 球灯泡</h2>
+            <p>可定制、有Matter认证证书、互联互通homekit、Alexa、GoogleHome</p>
+        </div>
+        <!-- 其他格子根据需要添加 -->
+    </div>
+    
+    <div class="pagination" id="pagination">
+        <!-- <a href="#" id="page1"></a>
+        <a href="#" id="page2"></a> -->
+        <!-- <a href="#">3</a> -->
+        <!-- 根据需要添加更多页码 -->
+    </div>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const gridContainer = document.getElementById('gridContainer');
+        const pagination = document.getElementById('pagination');
+        const items = gridContainer.querySelectorAll('.grid-item');
+        const itemsPerPage = 6; // 每页显示的项数
+
+        // 计算总页数
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+
+        // 初始化，显示第一页，隐藏其余页的项
+        let currentPage = 1;
+        showPage(currentPage);
+
+        // 创建分页链接
+        for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('a');
+            pageLink.href = '#';
+            pageLink.textContent = i;
+            pageLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                currentPage = i;
+                showPage(currentPage);
+            });
+            pagination.appendChild(pageLink);
+        }
+
+        // 初始化当前页的页码样式
+        pagination.querySelector(`a:nth-child(${currentPage})`).classList.add('active');
+
+        // 显示指定页的项
+        function showPage(pageNumber) {
+            // 首先隐藏所有项
+            items.forEach(function(item) {
+                item.style.display = 'none';
+            });
+
+            // 计算当前页应该显示的项的索引范围
+            const startIndex = (pageNumber - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+
+            // 显示当前页的项
+            for (let i = startIndex; i < endIndex && i < items.length; i++) {
+                items[i].style.display = 'block';
+            }
+
+            // 更新活动页码样式
+            const pageLinks = pagination.querySelectorAll('a');
+            pageLinks.forEach(function(link) {
+                if (parseInt(link.textContent) === pageNumber) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    });
+
+    </script>
+
+</body>
+</html>
