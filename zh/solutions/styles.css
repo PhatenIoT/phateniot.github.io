@@ -12,7 +12,7 @@ body {
 
 .grid-item {
     background-color: #f0f0f0;
-    padding: 20px;
+    padding: 0px;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -26,14 +26,14 @@ body {
 
 .grid-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .grid-item img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    pointer-events: none;
+
 }
 
 .grid-item h2 {
@@ -49,6 +49,7 @@ body {
     -webkit-line-clamp: 3; /* 显示几行文字 */
     -webkit-box-orient: vertical;
     text-align: left;
+    margin: 14px;
 }
 
 .pagination {
@@ -64,6 +65,7 @@ body {
     color: #333;
     border: 1px solid #ccc;
     border-radius: 4px;
+
 }
 
 .pagination a.active {
